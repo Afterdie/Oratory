@@ -12,7 +12,7 @@ const menuItems = [
     {
         icon: BriefCase,
         name: 'Jobs',
-        route: '/jobs/preview',
+        route: '/jobs/123/preview',
         ping: false,
     },
     {
