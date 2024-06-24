@@ -8,6 +8,9 @@ import XDIcon from '../../../../public/icons/jobDetails/xd.png'
 import LocationIcon from '../../../../public/icons/jobDetails/location.svg'
 import StackIcon from '../../../../public/icons/jobDetails/stack.svg'
 
+import Logo from '../../../../public/icons/jobDetails/Logo.png'
+import Link from 'next/link'
+
 const jobDetails = {
     title: {
         position: 'Senior Product Designer',
@@ -47,7 +50,27 @@ const jobDetails = {
         payTypes: ['Performance bonus', 'Yearly bonus'],
         location: 'In person',
     },
-    company: {},
+    company: {
+        icon: Logo,
+        name: 'Atlassian',
+        details: {
+            sizeRange: ['1k', '2k'],
+            sector: 'Information Technology, Infrastructure',
+            foundedDate: 2019,
+            type: 'Private',
+            funding: 'Bootstrapped',
+            founder: [
+                {
+                    name: 'Scott Farquhar,',
+                    link: 'https://www.google.com/search?sca_esv=2e8a42a989b18c72&sca_upv=1&sxsrf=ADLYWIJfOan6Il30oG_UZfuOgWJJQyy6jw:1718807486320&q=Scott+Farquhar&si=ACC90nwLLwns5sISZcdzuISy7t-NHozt8Cbt6G3WNQfC9ekAgGn2U5_lv-iJKoEW9GGV3oQ_U1KzHM3grBvdDJw8AP9jrnXyCRK6qNSYCb3jHdJP2aGUh_HIEtaCjacARkKoOWECb-5Ob0Mv9e_MI4c_vMY8PVDZWA6-OO6yqvbV1TIRgm4P4FtNTbK6rHh3ojk0CXz_ZgaKdVf6VpRiXhZ7YUAy8LzI5HMyryDEBGhju5Ama_FvECG7_qGa4tSKw7XIbHa99s9btrbgRBy-6z85_2p6BPYPhA%3D%3D&sa=X&sqi=2&ved=2ahUKEwip7KLt8OeGAxVBRmwGHTGjBGsQmxMoAXoECDYQAw',
+                },
+                {
+                    name: 'Mike Cannon-Brookes',
+                    link: 'https://www.google.com/search?sca_esv=2e8a42a989b18c72&sca_upv=1&sxsrf=ADLYWIJfOan6Il30oG_UZfuOgWJJQyy6jw:1718807486320&q=Scott+Farquhar&si=ACC90nwLLwns5sISZcdzuISy7t-NHozt8Cbt6G3WNQfC9ekAgGn2U5_lv-iJKoEW9GGV3oQ_U1KzHM3grBvdDJw8AP9jrnXyCRK6qNSYCb3jHdJP2aGUh_HIEtaCjacARkKoOWECb-5Ob0Mv9e_MI4c_vMY8PVDZWA6-OO6yqvbV1TIRgm4P4FtNTbK6rHh3ojk0CXz_ZgaKdVf6VpRiXhZ7YUAy8LzI5HMyryDEBGhju5Ama_FvECG7_qGa4tSKw7XIbHa99s9btrbgRBy-6z85_2p6BPYPhA%3D%3D&sa=X&sqi=2&ved=2ahUKEwip7KLt8OeGAxVBRmwGHTGjBGsQmxMoAXoECDYQAw',
+                },
+            ],
+        },
+    },
 }
 
 export default function page() {
@@ -59,6 +82,7 @@ export default function page() {
             <hr />
             <Description />
             <hr />
+            <Company />
         </div>
     )
 }
@@ -200,6 +224,67 @@ function Description() {
                 </ul>
             </div>
             <h2>Work Location: {desc.location}</h2>
+        </div>
+    )
+}
+
+function Company() {
+    const company = jobDetails.company
+    return (
+        <div className="mx-[6.25rem] flex flex-col gap-[1rem] pb-[2rem] pt-[2.25rem]">
+            <div className="flex items-center gap-[0.625rem] py-[0.625rem]">
+                <Image src={company.icon} alt={company.name} />
+                <h2 className="text-[1.25rem] text-[#4F4F4F]">
+                    {company.name}
+                </h2>
+            </div>
+            <div className="grid grid-flow-col grid-cols-2 grid-rows-3 gap-x-[3rem] gap-y-[1.5rem]">
+                <div className="col-start-1 flex flex-col gap-[0.5rem]">
+                    <h3 className="text-[0.875rem] text-[#6E6D6D]">
+                        Company size
+                    </h3>
+                    <h2 className="text-[#3D3D3D]">
+                        {company.details.sizeRange[0]} -{' '}
+                        {company.details.sizeRange[1]} Employees
+                    </h2>
+                </div>
+                <div className="flex flex-col gap-[0.5rem]">
+                    <h3 className="text-[0.875rem] text-[#6E6D6D]">Sector</h3>
+                    <h2 className="text-[#3D3D3D]">{company.details.sector}</h2>
+                </div>
+                <div className="flex flex-col gap-[0.5rem]">
+                    <h3 className="text-[0.875rem] text-[#6E6D6D]">
+                        Founded In
+                    </h3>
+                    <h2 className="text-[#3D3D3D]">
+                        {company.details.foundedDate}
+                    </h2>
+                </div>
+                <div className="flex flex-col gap-[0.5rem]">
+                    <h3 className="text-[0.875rem] text-[#6E6D6D]">Type</h3>
+                    <h2 className="text-[#3D3D3D]">{company.details.type}</h2>
+                </div>
+                <div className="flex flex-col gap-[0.5rem]">
+                    <h3 className="text-[0.875rem] text-[#6E6D6D]">Funding</h3>
+                    <h2 className="text-[#3D3D3D]">
+                        {company.details.funding}
+                    </h2>
+                </div>
+                <div className="flex flex-col gap-[0.5rem]">
+                    <h3 className="text-[0.875rem] text-[#6E6D6D]">
+                        Founded By
+                    </h3>
+                    <div className="text-[#3D3D3D]">
+                        {company.details.founder.map((item, index) => {
+                            return (
+                                <Link href={item.link} key={index}>
+                                    {item.name}{' '}
+                                </Link>
+                            )
+                        })}
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
