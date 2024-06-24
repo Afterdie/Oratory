@@ -14,7 +14,7 @@ import NavMenu from './NavMenu'
 
 export default function Navbar() {
     return (
-        <nav className="fixed z-50 h-[100px] w-full bg-white drop-shadow-[0_4px_4px_rgba(217,217,217,0.1)]">
+        <nav className="fixed z-50 flex h-[6.25rem] w-full items-center bg-white drop-shadow-[0_4px_4px_rgba(217,217,217,0.1)]">
             <div className="mx-auto flex w-full max-w-[104rem] items-center justify-between">
                 <Logo />
                 <NavMenu />
