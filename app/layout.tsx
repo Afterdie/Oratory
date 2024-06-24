@@ -3,7 +3,7 @@ import './globals.css'
 
 import localFont from '@next/font/local'
 
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 
 const gensan = localFont({
     src: [
@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${gensan.variable} font-sans`}>
+            <body className={`${gensan.variable} font-sans bg-[#FCFCFC]`}>
                 <Navbar />
                 {children}
             </body>
