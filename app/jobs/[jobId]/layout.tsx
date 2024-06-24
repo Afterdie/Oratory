@@ -1,5 +1,5 @@
-import JobNavMenu from '../components/jobs/JobNavMenu'
-import SideBar from '../components/jobs/SideBar'
+import JobNavMenu from '../../components/jobs/JobNavMenu'
+import SideBar from '../../components/jobs/SideBar'
 
 export default function RootLayout({
     children,
