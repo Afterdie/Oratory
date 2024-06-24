@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
 
 import Navbar from './components/Navbar/Navbar'
 
@@ -38,9 +38,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${gensan.variable} font-sans bg-[#FCFCFC]`}>
+            <body
+                className={`${gensan.variable} h-screen bg-[#FCFCFC] font-sans`}
+            >
                 <Navbar />
-                {children}
+                <div className="relative top-[100px] h-full">{children}</div>
             </body>
         </html>
     )

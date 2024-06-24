@@ -6,7 +6,12 @@ import Link from 'next/link'
 
 import { NavMenuItemProps } from './NavMenu'
 
-export default function NavMenuItem({ name, icon, ping }: NavMenuItemProps) {
+export default function NavMenuItem({
+    name,
+    icon,
+    route,
+    ping,
+}: NavMenuItemProps) {
     const segment = useSelectedLayoutSegment()
 
     //applies a white filter to svg if on this page
@@ -15,13 +20,13 @@ export default function NavMenuItem({ name, icon, ping }: NavMenuItemProps) {
 
     return (
         <li
-            className={`inline rounded-[3.063rem] border-[0.125rem] p-[0.938rem] transition-all duration-300 ease-in-out ${
+            className={`inline rounded-[3.063rem] border-[0.125rem] px-[0.835rem] py-[0.722rem] transition-all duration-300 ease-in-out ${
                 name.toLowerCase() === segment
                     ? 'border-[#FCB4A5] bg-primary text-white'
                     : 'border-white bg-none'
             }`}
         >
-            <Link href={`/${name.toLowerCase()}`}>
+            <Link href={route}>
                 <div className="flex flex-row items-center gap-2">
                     <div className="relative">
                         {ping && name.toLowerCase() !== segment && (
@@ -34,7 +39,7 @@ export default function NavMenuItem({ name, icon, ping }: NavMenuItemProps) {
                         />
                     </div>
                     <h1
-                        className={`${
+                        className={`text-[1.25rem] ${
                             name.toLowerCase() === segment
                                 ? 'text-white'
                                 : 'text-[#B0B0B0]'

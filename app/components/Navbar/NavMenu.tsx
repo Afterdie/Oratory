@@ -12,16 +12,19 @@ const menuItems = [
     {
         icon: BriefCase,
         name: 'Jobs',
+        route: '/jobs/preview',
         ping: false,
     },
     {
         icon: Message,
         name: 'Messages',
+        route: '/messages/',
         ping: true,
     },
     {
         icon: Payments,
         name: 'Payments',
+        route: '/payments/',
         ping: false,
     },
 ]
@@ -30,17 +33,18 @@ const menuItems = [
 export type NavMenuItemProps = {
     name: string
     icon: any
+    route: string
     ping: boolean
 }
 
 export default function NavMenu() {
     return (
-        <div className="rounded-[2.25rem] border-[0.031rem] border-[#D1D1D1] p-2">
+        <nav className="rounded-[2.25rem] border-[0.031rem] border-[#D1D1D1] p-2">
             <ul className="flex gap-[3.125rem]">
-                {menuItems.map((item) => {
-                    return <NavMenuItem {...item} />
+                {menuItems.map((item, index) => {
+                    return <NavMenuItem {...item} key={index} />
                 })}
             </ul>
-        </div>
+        </nav>
     )
 }
