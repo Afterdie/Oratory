@@ -90,20 +90,22 @@ export default function page() {
 function Title() {
     const title = jobDetails.title
     return (
-        <div className="mx-[6.25rem] flex flex-col gap-[1.5rem] pb-[2rem] pt-[2.25rem]">
-            <div className="flex items-center gap-[0.75rem]">
+        <div className="mx-[1rem] flex flex-col gap-[1.5rem] pb-[2rem] pt-[2.25rem] lg:mx-[6.25rem]">
+            <div className="flex flex-col items-start gap-[0.75rem] lg:flex-row lg:items-center">
                 <h1 className="text-[2.188rem] font-semibold text-[#3D3D3D]">
                     {title.position}
                 </h1>
-                <div className="h-[0.25rem] w-[0.25rem] rounded-full bg-[#D1D1D1]" />
-                <p className="text-[0.875rem] font-medium text-[#888888]">
-                    posted {title.time} ago
-                </p>
-                <div className="flex items-center gap-[0.1rem] rounded-full border-[0.063rem] border-[#ABEFC6] bg-[#ECFDF3] py-[0.125rem] pl-[0.375rem] pr-[0.5rem]">
-                    <div className="m-[0.125rem] h-[0.375rem] w-[0.375rem] rounded-full bg-[#17B26A]" />
-                    <span className="font-inter text-[0.75rem] text-[#067647]">
-                        {title.open ? 'Open' : 'Closed'}
-                    </span>
+                <div className="hidden h-[0.25rem] w-[0.25rem] rounded-full bg-[#D1D1D1] lg:block" />
+                <div className="flex flex-row gap-[0.75rem]">
+                    <p className="text-[0.875rem] font-medium text-[#888888]">
+                        posted {title.time} ago
+                    </p>
+                    <div className="flex items-center gap-[0.1rem] rounded-full border-[0.063rem] border-[#ABEFC6] bg-[#ECFDF3] py-[0.125rem] pl-[0.375rem] pr-[0.5rem]">
+                        <div className="m-[0.125rem] h-[0.375rem] w-[0.375rem] rounded-full bg-[#17B26A]" />
+                        <span className="font-inter text-[0.75rem] text-[#067647]">
+                            {title.open ? 'Open' : 'Closed'}
+                        </span>
+                    </div>
                 </div>
             </div>
             <div className="flex items-center gap-[1rem]">
@@ -128,7 +130,7 @@ function Title() {
 function Skills() {
     const requirements = jobDetails.requirements
     return (
-        <div className="mx-[6.25rem] flex gap-[4rem] py-[2rem]">
+        <div className="mx-[1rem] grid grid-cols-2 gap-[4rem] py-[2rem] lg:mx-[6.25rem] lg:grid-cols-4">
             {/* skills required */}
             <div className="flex flex-col gap-[0.5rem]">
                 <h3 className="text-[0.875rem] text-[#6E6D6D]">
@@ -192,7 +194,7 @@ function Skills() {
 function Description() {
     const desc = jobDetails.description
     return (
-        <div className="mx-[6.25rem] flex flex-col gap-[0.5rem] pb-[2.25rem] pt-[2rem]">
+        <div className="mx-[1rem] flex flex-col gap-[0.5rem] pb-[2.25rem] pt-[2rem] lg:mx-[6.25rem]">
             <h2 className="text-[0.875rem] text-[#6E6D6D]">About the job</h2>
             <ul className="list-inside list-decimal">
                 {desc.about.map((item, index) => {
@@ -231,7 +233,7 @@ function Description() {
 function Company() {
     const company = jobDetails.company
     return (
-        <div className="mx-[6.25rem] flex flex-col gap-[1rem] pb-[2rem] pt-[2.25rem]">
+        <div className="mx-[1rem] flex flex-col gap-[1rem] pb-[2rem] pt-[2.25rem] lg:mx-[6.25rem]">
             <div className="flex items-center gap-[0.625rem] py-[0.625rem]">
                 <Image src={company.icon} alt={company.name} />
                 <h2 className="text-[1.25rem] text-[#4F4F4F]">

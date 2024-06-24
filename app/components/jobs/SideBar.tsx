@@ -43,7 +43,7 @@ export default function SideBar() {
 
 function List() {
     return (
-        <ul className="p-[0.75rem]">
+        <ul className="xl:p-[0.75rem]">
             {listItems.map((item, index) => {
                 return (
                     <li
@@ -51,7 +51,11 @@ function List() {
                         key={index}
                     >
                         <div className="flex items-center justify-start gap-[0.625rem] p-[0.625rem]">
-                            <Image src={item.icon} alt={item.name} />
+                            <Image
+                                src={item.icon}
+                                alt={item.name}
+                                className="hidden xl:block"
+                            />
                             <p className="font-medium text-[#4F4F4F]">
                                 {item.name}
                             </p>
@@ -67,7 +71,7 @@ function List() {
 }
 function Buttons() {
     return (
-        <div className="flex justify-between gap-[1rem]">
+        <div className="flex flex-col justify-between gap-[1rem] xl:flex-row">
             {/* //dimensions have been set explicitly here */}
             <button className="flex h-[2.875rem] w-[10.75rem] items-center justify-center gap-[0.0.625rem] rounded-[0.5rem] border-[0.05rem] border-primary bg-[#FEF4F2] text-white transition-colors duration-300 ease-in-out hover:bg-primary/20">
                 <svg
