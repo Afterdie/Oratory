@@ -38,9 +38,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`${gensan.variable} h-screen bg-[#FCFCFC] font-sans`}
-            >
+            <body className={`${gensan.variable} h-screen bg-white font-sans`}>
                 <Navbar />
                 <div className="relative top-[100px] h-full">{children}</div>
             </body>
