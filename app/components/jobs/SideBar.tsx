@@ -114,16 +114,16 @@ function Buttons() {
     return (
         <div className="flex flex-col items-center justify-between gap-[1rem] xl:flex-row">
             {/* //dimensions have been set explicitly here */}
-            <button className="flex h-[2.975rem] w-[10.75rem] items-center justify-center gap-[0.0.625rem] rounded-[0.5rem] border-[0.05rem] border-primary bg-[#FEF4F2] text-white transition-colors duration-300 ease-in-out hover:bg-primary/20">
+            <button className="flex items-center justify-center gap-[0.0.625rem] rounded-[0.5rem] border-[0.05rem] border-primary bg-[#FEF4F2] px-[2.717rem] py-[0.675rem] text-white transition-colors duration-300 ease-in-out hover:bg-primary/20">
                 <Image src={DeleteIcon} alt="delete" />
 
-                <p className="text-[1rem] font-medium text-primary">
+                <p className="text-nowrap text-[1rem] font-medium text-primary">
                     Delete job
                 </p>
             </button>
-            <button className="flex h-[3.125rem] w-[10.75rem] items-center justify-center gap-[0.0.625rem] rounded-[0.5rem] border-[0.125rem] border-[#FED3CA] bg-primary transition-colors duration-300 ease-in-out hover:bg-primary/75">
+            <button className="flex items-center justify-center gap-[0.0.625rem] rounded-[0.5rem] border-[0.125rem] border-[#FED3CA] bg-primary px-[3rem] py-[0.689rem] transition-colors duration-300 ease-in-out hover:bg-primary/75">
                 <Image src={EditIcon} alt="edit" />
-                <p className="text-white">Edit job</p>
+                <p className="text-nowrap text-white">Edit job</p>
             </button>
         </div>
     )
