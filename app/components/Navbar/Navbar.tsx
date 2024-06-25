@@ -33,7 +33,7 @@ function Profile() {
             </div>
 
             <div className="flex gap-[0.375rem]">
-                <Link href={'/account'}>
+                <Link href={'/'}>
                     <Image src={Avatar} alt="profile picture" />
                 </Link>
                 <Dropdown />
