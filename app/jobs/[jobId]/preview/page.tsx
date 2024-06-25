@@ -8,7 +8,8 @@ import XDIcon from '../../../../public/icons/jobDetails/xd.png'
 import LocationIcon from '../../../../public/icons/jobDetails/location.svg'
 import StackIcon from '../../../../public/icons/jobDetails/stack.svg'
 
-import Logo from '../../../../public/icons/jobDetails/Logo.png'
+import Logo from '../../../../public/icons/Logo.png'
+
 import Link from 'next/link'
 
 const jobDetails = {
