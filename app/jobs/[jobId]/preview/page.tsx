@@ -90,7 +90,7 @@ export default function page() {
 function Title() {
     const title = jobDetails.title
     return (
-        <div className="mx-[1rem] flex flex-col gap-[1.5rem] pb-[2rem] pt-[2.25rem] lg:mx-[6.25rem]">
+        <div className="mx-[1rem] flex flex-col gap-[1.2rem] pb-[1.9rem] pt-[2.15rem] lg:mx-[6.25rem]">
             <div className="flex flex-col items-start gap-[0.75rem] lg:flex-row lg:items-center">
                 <h1 className="text-[2.188rem] font-semibold text-[#3D3D3D]">
                     {title.position}
@@ -116,7 +116,7 @@ function Title() {
                     </h2>
                 </div>
                 <div className="h-[0.25rem] w-[0.25rem] rounded-full bg-[#D1D1D1]" />
-                <div className="flex flex-row items-center gap-[0.5rem]">
+                <div className="flex flex-row items-center gap-[0.75rem]">
                     <Image src={StackIcon} alt="salary" />
                     <h2 className="text-[1.25rem] text-[#5D5D5D]">
                         {title.salaryRange[0]}-{title.salaryRange[1]}
@@ -130,7 +130,7 @@ function Title() {
 function Skills() {
     const requirements = jobDetails.requirements
     return (
-        <div className="mx-[1rem] grid grid-cols-2 gap-[4rem] py-[2rem] lg:mx-[6.25rem] lg:grid-cols-4">
+        <div className="mx-[1rem] grid max-w-[54.5rem] grid-cols-2 gap-[4rem] py-[2rem] lg:mx-[6.25rem] lg:grid-cols-4">
             {/* skills required */}
             <div className="flex flex-col gap-[0.5rem]">
                 <h3 className="text-[0.875rem] text-[#6E6D6D]">
@@ -141,10 +141,10 @@ function Skills() {
                         return (
                             <li
                                 key={index}
-                                className="flex gap-[0.188rem] self-start rounded-[0.375rem] border-[0.063rem] border-[#D0D5DD] px-[0.375rem] py-[0.25rem]"
+                                className="flex gap-[0.188rem] self-start rounded-[0.375rem] border-[0.063rem] border-[#D0D5DD] px-[0.347rem] py-[0.125rem]"
                             >
                                 <Image alt={item.name} src={item.icon} />
-                                <p className="text-[0.75rem] text-[#344054]">
+                                <p className="truncate text-[0.75rem] text-[#344054]">
                                     {item.name}
                                 </p>
                             </li>
@@ -183,7 +183,7 @@ function Skills() {
                 <h3 className="text-[0.875rem] text-[#6E6D6D]">
                     Years of Experience
                 </h3>
-                <h2 className="text-[1rem] font-semibold text-[#3D3D3D]">
+                <h2 className="text-[0.977rem] font-semibold text-[#3D3D3D]">
                     {requirements.yoe}+ Years of Experience
                 </h2>
             </div>
@@ -194,14 +194,14 @@ function Skills() {
 function Description() {
     const desc = jobDetails.description
     return (
-        <div className="mx-[1rem] flex flex-col gap-[0.5rem] pb-[2.25rem] pt-[2rem] lg:mx-[6.25rem]">
+        <div className="mx-[1rem] flex flex-col pb-[2.65rem] pt-[2rem] lg:mx-[6.25rem]">
             <h2 className="text-[0.875rem] text-[#6E6D6D]">About the job</h2>
-            <ul className="list-inside list-decimal">
+            <ul className="mt-[0.5rem] list-inside list-decimal leading-[1.75rem]">
                 {desc.about.map((item, index) => {
                     return <li key={index}>{item}</li>
                 })}
             </ul>
-            <div>
+            <div className="leading-[1.75rem]">
                 <span>Benefits:</span>
                 <ul className="list-inside list-disc px-[0.5rem]">
                     {desc.benefits.map((item, index) => {
@@ -209,7 +209,7 @@ function Description() {
                     })}
                 </ul>
             </div>
-            <div>
+            <div className="leading-[1.75rem]">
                 <span>Schedule:</span>
                 <ul className="list-inside list-disc px-[0.5rem]">
                     {desc.schedule.map((item, index) => {
@@ -217,7 +217,7 @@ function Description() {
                     })}
                 </ul>
             </div>
-            <div>
+            <div className="leading-[1.75rem]">
                 <span>Supplemental pay types:</span>
                 <ul className="list-inside list-disc px-[0.5rem]">
                     {desc.payTypes.map((item, index) => {
@@ -240,7 +240,7 @@ function Company() {
                     {company.name}
                 </h2>
             </div>
-            <div className="grid grid-flow-col grid-cols-2 grid-rows-3 gap-x-[3rem] gap-y-[1.5rem]">
+            <div className="grid max-w-[46rem] grid-flow-col grid-cols-2 grid-rows-3 gap-x-[3rem] gap-y-[1.25rem]">
                 <div className="col-start-1 flex flex-col gap-[0.5rem]">
                     <h3 className="text-[0.875rem] text-[#6E6D6D]">
                         Company size

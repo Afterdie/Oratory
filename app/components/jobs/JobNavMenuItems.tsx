@@ -16,9 +16,9 @@ export default function JobNavMenuItems(props: { name: string }) {
     return (
         <li>
             <Link href={routeName}>
-                <div className="relative py-[1.188rem]">
+                <div className="relative py-[1.12rem]">
                     <h1
-                        className={`text-[1.25rem] font-semibold ${segment === routeName ? 'text-primary' : 'text-[#888888]'}`}
+                        className={`text-[1.25rem] ${segment === routeName ? 'font-semibold text-primary' : 'font-medium text-[#888888]'}`}
                     >
                         {props.name}
                     </h1>

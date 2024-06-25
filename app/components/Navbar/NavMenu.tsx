@@ -39,12 +39,14 @@ export type NavMenuItemProps = {
 
 export default function NavMenu() {
     return (
-        <nav className="rounded-[2.25rem] border-[0.031rem] border-[#D1D1D1] p-2">
-            <ul className="flex gap-[3.125rem]">
-                {menuItems.map((item, index) => {
-                    return <NavMenuItem {...item} key={index} />
-                })}
-            </ul>
-        </nav>
+        <div className="fixed z-50 flex w-full justify-center md:top-[1.063rem]">
+            <nav className="rounded-[2.25rem] border-[0.031rem] border-[#D1D1D1] bg-white p-2">
+                <ul className="flex gap-[3.125rem]">
+                    {menuItems.map((item, index) => {
+                        return <NavMenuItem {...item} key={index} />
+                    })}
+                </ul>
+            </nav>
+        </div>
     )
 }

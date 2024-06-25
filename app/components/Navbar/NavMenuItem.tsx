@@ -30,12 +30,13 @@ export default function NavMenuItem({
                 <div className="flex flex-row items-center gap-2">
                     <div className="relative">
                         {ping && name.toLowerCase() !== segment && (
-                            <div className="absolute left-[0.27rem] top-0 h-2 w-2 rounded-full bg-primary" />
+                            <div className="absolute left-[0.2rem] top-0 h-[0.375rem] w-[0.375rem] rounded-full bg-primary" />
                         )}
                         <Image
                             alt={name}
                             src={icon}
-                            style={{ filter: filterStyle }}
+                            //turn this back on
+                            // style={{ filter: filterStyle }}
                         />
                     </div>
                     <h1
