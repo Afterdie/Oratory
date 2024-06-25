@@ -35,8 +35,7 @@ export default function NavMenuItem({
                         <Image
                             alt={name}
                             src={icon}
-                            //turn this back on
-                            // style={{ filter: filterStyle }}
+                            style={{ filter: filterStyle }}
                         />
                     </div>
                     <h1

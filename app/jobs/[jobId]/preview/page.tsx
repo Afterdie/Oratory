@@ -8,7 +8,7 @@ import XDIcon from '../../../../public/icons/jobDetails/xd.png'
 import LocationIcon from '../../../../public/icons/jobDetails/location.svg'
 import StackIcon from '../../../../public/icons/jobDetails/stack.svg'
 
-import Logo from '../../../../public/icons/Logo.png'
+import Logo from '../../../../public/icons/jobDetails/logo.png'
 
 import Link from 'next/link'
 
