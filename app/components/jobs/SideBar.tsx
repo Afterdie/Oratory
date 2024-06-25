@@ -120,9 +120,9 @@ function Buttons() {
                     Delete job
                 </p>
             </button>
-            <button className="flex h-[3.125rem] w-[10.75rem] items-center justify-between rounded-[0.5rem] border-[0.125rem] border-[#FED3CA] bg-primary transition-colors duration-300 ease-in-out hover:bg-primary/75">
+            <button className="flex h-[3.125rem] w-[10.75rem] items-center justify-center rounded-[0.5rem] border-[0.125rem] border-[#FED3CA] bg-primary transition-colors duration-300 ease-in-out hover:bg-primary/75">
                 <Image src={EditIcon} alt="edit" />
-                {/* <p className="text-nowrap text-white">Edit job</p> */}
+                <p className="text-nowrap text-white">Edit job</p>
             </button>
         </div>
     )
