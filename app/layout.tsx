@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
-import localFont from 'next/font/local'
+import CustomFont from 'next/font/local'
 
 import Navbar from './components/Navbar/Navbar'
 import NavMenu from './components/Navbar/NavMenu'
 
-const gensan = localFont({
+const gensan = CustomFont({
     src: [
         {
             path: '../public/fonts/GeneralSans-Bold.woff2',
