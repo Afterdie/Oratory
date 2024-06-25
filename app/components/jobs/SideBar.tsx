@@ -114,42 +114,15 @@ function Buttons() {
     return (
         <div className="flex flex-col items-center justify-between gap-[1rem] xl:flex-row">
             {/* //dimensions have been set explicitly here */}
-            <button className="flex items-center justify-center gap-[0.0.625rem] rounded-[0.5rem] border-[0.05rem] border-primary bg-[#FEF4F2] px-[2.717rem] py-[0.675rem] text-white transition-colors duration-300 ease-in-out hover:bg-primary/20">
-                <svg
-                    width="21"
-                    height="20"
-                    viewBox="0 0 21 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M8 2.5H13M3 5H18M16.3333 5L15.7489 13.7661C15.6612 15.0813 15.6174 15.7389 15.3333 16.2375C15.0833 16.6765 14.706 17.0294 14.2514 17.2497C13.735 17.5 13.0759 17.5 11.7578 17.5H9.24221C7.92409 17.5 7.26503 17.5 6.74861 17.2497C6.29396 17.0294 5.91674 16.6765 5.66665 16.2375C5.38259 15.7389 5.33875 15.0813 5.25107 13.7661L4.66667 5M8.83333 8.75V12.9167M12.1667 8.75V12.9167"
-                        stroke="#DC4A2D"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    />
-                </svg>
-
+            <button className="flex h-[2.975rem] w-[10.75rem] items-center justify-center gap-[0.0.625rem] rounded-[0.5rem] border-[0.05rem] border-primary bg-[#FEF4F2] text-white transition-colors duration-300 ease-in-out hover:bg-primary/20">
+                <Image src={DeleteIcon} alt="delete" />
                 <p className="text-nowrap text-[1rem] font-medium text-primary">
                     Delete job
                 </p>
             </button>
-            <button className="flex items-center justify-center gap-[0.0.625rem] rounded-[0.5rem] border-[0.125rem] border-[#FED3CA] bg-primary transition-colors duration-300 ease-in-out hover:bg-primary/75">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="white"
-                    stroke="white"
-                    className="bi bi-chevron-left"
-                    viewBox="0 0 16 16"
-                >
-                    <path
-                        fillRule="evenodd"
-                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-                    />
-                </svg>
-                <p className="text-nowrap text-white">Edit job</p>
+            <button className="flex h-[3.125rem] w-[10.75rem] items-center justify-between rounded-[0.5rem] border-[0.125rem] border-[#FED3CA] bg-primary transition-colors duration-300 ease-in-out hover:bg-primary/75">
+                <Image src={EditIcon} alt="edit" />
+                {/* <p className="text-nowrap text-white">Edit job</p> */}
             </button>
         </div>
     )
