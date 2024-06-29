@@ -30,7 +30,7 @@ export default function NavMenuItem({
                 <div className="flex flex-row items-center gap-2">
                     <div className="relative">
                         {ping && name.toLowerCase() !== segment && (
-                            <div className="absolute left-[0.2rem] top-0 h-[0.375rem] w-[0.375rem] rounded-full bg-primary" />
+                            <div className="absolute -right-[0.08rem] top-0 h-[0.375rem] w-[0.375rem] rounded-full bg-primary" />
                         )}
                         <Image
                             alt={name}
