@@ -11,7 +11,11 @@ Cloned the [figma]([https://figma.com/design/1PsDL6m6lgnCK9Fs6x1fUX/Job-preview-
 - **Highly Responsive**
 	- The secondary navmenu becomes a part of the sidebar after mobile breakpoint.
 	- Button to reveal the sidebar
-https://github.com/Afterdie/Oratory/assets/82810411/c670fb8b-6ac5-4b6d-ad8e-b022c5fab02d
+
+
+https://github.com/Afterdie/Oratory/assets/82810411/46a0d99e-e9b8-4dd1-b4d9-365b916738e9
+
+
 
 - **Pixel Perfect Replica**- Heres the difference image. Generated using [Diffchecker](https://www.diffchecker.com/image-compare/)
 ![diffrep](https://github.com/Afterdie/Oratory/assets/82810411/ceabf736-675e-446a-9da2-0cfad7e9311a)
