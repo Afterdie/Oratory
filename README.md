@@ -1,4 +1,5 @@
 # Oratory Task
+Hosted on **Vercel** [link](https://oratory-gamma.vercel.app)
 
 This is the repo for the oratory task. For [reference](https://x.com/itsharshag/status/1805211511360483723)  
 Cloned the [figma]([https://figma.com/design/1PsDL6m6lgnCK9Fs6x1fUX/Job-preview-dashboard](https://figma.com/design/1PsDL6m6lgnCK9Fs6x1fUX/Job-preview-dashboard)) file using **NextJS** and **Tailwind**
