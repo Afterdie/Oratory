@@ -22,12 +22,14 @@ https://github.com/Afterdie/Oratory/assets/82810411/46a0d99e-e9b8-4dd1-b4d9-365b
 ![diffrep](https://github.com/Afterdie/Oratory/assets/82810411/ceabf736-675e-446a-9da2-0cfad7e9311a)
 
 # Getting Started
-1. Clone the repo 
+Clone the repo
+
 ```git clone https://github.com/Afterdie/Oratory.git```
 
 ## Install dependencies
 
-The project using npm
+The project uses npm
+
 ```npm install```
 
 ## Start dev server
